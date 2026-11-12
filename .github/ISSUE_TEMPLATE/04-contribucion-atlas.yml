@@ -1,0 +1,44 @@
+name: Contribución al Atlas Urbano Regional
+description: Proponer o revisar metadatos de un producto para el catálogo regional del Atlas
+title: "[Atlas] "
+labels: ["tipo:atlas"]
+body:
+  - type: dropdown
+    id: project_id
+    attributes:
+      label: Proyecto
+      options:
+        - pa-panama-oeste
+        - sv-amss
+        - cr-la-carpio
+        - sv-la-union
+        - gt-bethania
+        - do-santiago
+        - gt-salud-metropolitana
+        - hn-distrito-central
+    validations:
+      required: true
+  - type: input
+    id: product_title
+    attributes:
+      label: Título del producto y archivo en atlas/products/
+    validations:
+      required: true
+  - type: textarea
+    id: coverage_temporal
+    attributes:
+      label: Cobertura espacial, resolución y periodo de referencia
+    validations:
+      required: true
+  - type: textarea
+    id: sources_method
+    attributes:
+      label: Fuentes de datos, método e indicador (con unidad)
+    validations:
+      required: true
+  - type: textarea
+    id: limitations_license
+    attributes:
+      label: Limitaciones de interpretación y condiciones de reutilización autorizadas
+    validations:
+      required: true

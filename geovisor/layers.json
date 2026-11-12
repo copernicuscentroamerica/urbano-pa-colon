@@ -1,0 +1,331 @@
+{
+  "schema_version": "1.0.0",
+  "project_id": "pa-colon",
+  "title": "Distrito de Colón: cobertura urbana, logística portuaria y expansión 2018–2024",
+  "country": {
+    "code": "PA",
+    "name": "Panamá"
+  },
+  "map_view": {
+    "center": [
+      -79.858,
+      9.332
+    ],
+    "zoom": 12.1,
+    "bbox": [
+      -79.943,
+      9.247,
+      -79.767,
+      9.413
+    ],
+    "declared_centroid": [
+      -79.858,
+      9.332
+    ],
+    "is_referential": false,
+    "reference_note": "Corredor Urbano, Portuario y Transístmico del Distrito de Colón (Isla Manzanillo, Zona Libre, puertos Cristóbal/MIT/Coco Solo, Cativá, Sabanitas y Puerto Pilón · 24,696.2 ha).",
+    "area_declared": "24,696.2 ha terrestres en el corredor urbano-portuario del Distrito de Colón",
+    "scale_label": "Distrital / Corredor urbano-portuario y malla continua de 250 m"
+  },
+  "geolibre_integration": {
+    "web_app_base_url": "https://web.geolibre.app/",
+    "project_file": "geovisor/proyecto.geolibre.json",
+    "embed_layout": "maponly",
+    "supports_local_geojson_preview": true
+  },
+  "planned_controls": [
+    "Conmutación entre los mosaicos clasificados GEO-URBANO de 2018, 2021 y 2024 a 10 m.",
+    "Consulta interactiva por celda de 250 m (2,003 celdas) con cambio porcentual construido 2018–2024.",
+    "Filtro de recintos logístico-portuarios (Zona Libre/terminales), núcleos de muy alta densidad y polígonos de nueva expansión.",
+    "Enlace directo al Comparador Multianual A|B (/comparador/) para inspección año por año 2018–2024."
+  ],
+  "external_references": [
+    {
+      "label": "Motor metodológico GEO-URBANO (colon2025mun-commits)",
+      "url": "https://github.com/colon2025mun-commits/urbano-gt-comparador",
+      "kind": "documentacion_tecnica",
+      "note": "Repositorio base del algoritmo de clasificación multianual de 6 clases en Google Earth Engine y Python."
+    }
+  ],
+  "layers": [
+    {
+      "id": "pa-colon-perimetro",
+      "title": "Perímetro operativo del corredor urbano-portuario de Colón (24,696.2 ha)",
+      "group": "1 · Unidades territoriales de referencia",
+      "format": "geojson",
+      "geometry_type": "polygon",
+      "status": "publicado",
+      "source_path": "geovisor/capas/perimetro_zona_estudio.geojson",
+      "resolution": "Polígono envolvente terrestre EPSG:4326",
+      "style": {
+        "fill_color": "#00E5FF",
+        "fill_opacity": 0.03,
+        "stroke_color": "#0C1659",
+        "stroke_width": 2.6,
+        "visible_by_default": true
+      },
+      "caveat": "Delimita el ámbito terrestre continuo analizado entre Isla Manzanillo, Cristóbal, Cativá, Sabanitas y Puerto Pilón."
+    },
+    {
+      "id": "pa-colon-corregimientos",
+      "title": "Corregimientos del corredor de Colón con balance 2018–2024",
+      "group": "1 · Unidades territoriales de referencia",
+      "format": "geojson",
+      "geometry_type": "polygon",
+      "status": "publicado",
+      "source_path": "geovisor/capas/colon_corregimientos.geojson",
+      "resolution": "6 corregimientos enriquecidos con hectáreas por clase 2018 y 2024",
+      "style": {
+        "fill_color": "#0F766E",
+        "fill_opacity": 0.08,
+        "stroke_color": "#0F766E",
+        "stroke_width": 1.8,
+        "visible_by_default": true
+      },
+      "caveat": "Haz clic en cada corregimiento (Barrio Norte, Barrio Sur, Cristóbal, Cativá, Sabanitas, Puerto Pilón) para consultar su cambio construido."
+    },
+    {
+      "id": "pa-colon-raster-2024",
+      "title": "Cobertura multiclase GEO-URBANO 2024 a 10 m (6 categorías)",
+      "group": "2 · Clasificación satelital multianual a 10 m (Sentinel-2)",
+      "format": "xyz_or_cog",
+      "geometry_type": "raster",
+      "status": "publicado",
+      "source_path": "geovisor/capas/colon_cobertura_2024_cog.tif",
+      "preview_image_path": "geovisor/data/colon_cobertura_2024.png",
+      "image_coordinates": [
+        [
+          -79.943,
+          9.413
+        ],
+        [
+          -79.767,
+          9.413
+        ],
+        [
+          -79.767,
+          9.247
+        ],
+        [
+          -79.943,
+          9.247
+        ]
+      ],
+      "resolution": "10 m · Compuesto libre de nubes Sentinel-2 L2A 2024",
+      "style": {
+        "fill_color": "#D7263D",
+        "fill_opacity": 0.78,
+        "stroke_color": "#7B2CBF",
+        "stroke_width": 1.0,
+        "visible_by_default": true,
+        "fill_color_categories": [
+          {
+            "value": 1,
+            "label": "Urbanización residencial/mixta (661.6 ha)",
+            "color": "#D7263D"
+          },
+          {
+            "value": 2,
+            "label": "Asentamiento de alta densidad (2,291.6 ha)",
+            "color": "#F28C28"
+          },
+          {
+            "value": 3,
+            "label": "Industrial / Portuario / Zona Libre (3,085.8 ha)",
+            "color": "#7B2CBF"
+          },
+          {
+            "value": 4,
+            "label": "Vegetación, bosque húmedo y manglar (16,640.7 ha)",
+            "color": "#2E8B57"
+          },
+          {
+            "value": 5,
+            "label": "Suelo desnudo / explanación",
+            "color": "#C9A66B"
+          },
+          {
+            "value": 6,
+            "label": "Cuerpos de agua interiores y canales",
+            "color": "#9DB4C0"
+          }
+        ]
+      },
+      "caveat": "Corte más reciente (2024) con 6,039.0 ha construidas totales en la ventana de análisis (+20.0% respecto a 2018)."
+    },
+    {
+      "id": "pa-colon-raster-2021",
+      "title": "Cobertura multiclase GEO-URBANO 2021 a 10 m (corte intermedio)",
+      "group": "2 · Clasificación satelital multianual a 10 m (Sentinel-2)",
+      "format": "xyz_or_cog",
+      "geometry_type": "raster",
+      "status": "publicado",
+      "source_path": "geovisor/capas/colon_cobertura_2021_cog.tif",
+      "preview_image_path": "geovisor/data/colon_cobertura_2021.png",
+      "image_coordinates": [
+        [
+          -79.943,
+          9.413
+        ],
+        [
+          -79.767,
+          9.413
+        ],
+        [
+          -79.767,
+          9.247
+        ],
+        [
+          -79.943,
+          9.247
+        ]
+      ],
+      "resolution": "10 m · Compuesto libre de nubes Sentinel-2 L2A 2021",
+      "style": {
+        "fill_color": "#F28C28",
+        "fill_opacity": 0.75,
+        "stroke_color": "#F28C28",
+        "stroke_width": 1.0,
+        "visible_by_default": false
+      },
+      "caveat": "Corte intermedio 2021 para comparación trienal directa desde el panel de capas."
+    },
+    {
+      "id": "pa-colon-raster-2018",
+      "title": "Cobertura multiclase GEO-URBANO 2018 a 10 m (línea base)",
+      "group": "2 · Clasificación satelital multianual a 10 m (Sentinel-2)",
+      "format": "xyz_or_cog",
+      "geometry_type": "raster",
+      "status": "publicado",
+      "source_path": "geovisor/capas/colon_cobertura_2018_cog.tif",
+      "preview_image_path": "geovisor/data/colon_cobertura_2018.png",
+      "image_coordinates": [
+        [
+          -79.943,
+          9.413
+        ],
+        [
+          -79.767,
+          9.413
+        ],
+        [
+          -79.767,
+          9.247
+        ],
+        [
+          -79.943,
+          9.247
+        ]
+      ],
+      "resolution": "10 m · Compuesto libre de nubes Sentinel-2 L2A 2018",
+      "style": {
+        "fill_color": "#2E8B57",
+        "fill_opacity": 0.75,
+        "stroke_color": "#2E8B57",
+        "stroke_width": 1.0,
+        "visible_by_default": false
+      },
+      "caveat": "Línea base histórica 2018 (5,034.3 ha construidas totales)."
+    },
+    {
+      "id": "pa-colon-malla-250m",
+      "title": "Malla continua de síntesis territorial 250 m (2,003 celdas)",
+      "group": "3 · Síntesis territorial, logística y frentes de expansión",
+      "format": "geojson",
+      "geometry_type": "polygon",
+      "status": "publicado",
+      "source_path": "geovisor/capas/colon_malla_cobertura_250m.geojson",
+      "resolution": "Celdas regulares de 250 m con composición porcentual 2018–2024",
+      "style": {
+        "fill_color": "#2E8B57",
+        "fill_color_attribute": "clase_dom",
+        "fill_color_categories": [
+          {
+            "value": 1,
+            "label": "Dominancia Urbanización",
+            "color": "#D7263D"
+          },
+          {
+            "value": 2,
+            "label": "Dominancia Asentamiento denso",
+            "color": "#F28C28"
+          },
+          {
+            "value": 3,
+            "label": "Dominancia Industrial / Portuario",
+            "color": "#7B2CBF"
+          },
+          {
+            "value": 4,
+            "label": "Dominancia Vegetación / Manglar",
+            "color": "#2E8B57"
+          },
+          {
+            "value": 5,
+            "label": "Dominancia Suelo desnudo",
+            "color": "#C9A66B"
+          }
+        ],
+        "fill_opacity": 0.55,
+        "stroke_color": "#1E293B",
+        "stroke_width": 0.25,
+        "visible_by_default": false
+      },
+      "caveat": "Cada celda reporta % construido 2018 y 2024, cambio en puntos porcentuales y desglose por uso dominante."
+    },
+    {
+      "id": "pa-colon-expansion-2018-2024",
+      "title": "Polígonos de nueva expansión construida 2018–2024 (324 frentes · 1,102.6 ha)",
+      "group": "3 · Síntesis territorial, logística y frentes de expansión",
+      "format": "geojson",
+      "geometry_type": "polygon",
+      "status": "publicado",
+      "source_path": "geovisor/capas/colon_expansion_construida_2018_2024.geojson",
+      "resolution": "Polígonos >= 0.35 ha de transición no-construido -> construido",
+      "style": {
+        "fill_color": "#FFBE0B",
+        "fill_opacity": 0.78,
+        "stroke_color": "#B45309",
+        "stroke_width": 1.4,
+        "visible_by_default": true
+      },
+      "caveat": "Identifica nuevas explanaciones portuarias/logísticas y frentes de expansión residencial sobre el eje Transístmico (Cativá, Sabanitas, Cristóbal)."
+    },
+    {
+      "id": "pa-colon-logistica-zonalibre",
+      "title": "Polos logísticos, portuarios y Zona Libre detectados (143 polígonos · 2,866.8 ha)",
+      "group": "3 · Síntesis territorial, logística y frentes de expansión",
+      "format": "geojson",
+      "geometry_type": "polygon",
+      "status": "publicado",
+      "source_path": "geovisor/capas/colon_poligonos_logistica_zonalibre.geojson",
+      "resolution": "Parches construidos brillantes de gran porte (>= 1.2 ha)",
+      "style": {
+        "fill_color": "#7B2CBF",
+        "fill_opacity": 0.45,
+        "stroke_color": "#5A189A",
+        "stroke_width": 1.3,
+        "visible_by_default": false
+      },
+      "caveat": "Delimita recintos de grandes cubiertas industriales, patios de contenedores (MIT, CCT, Cristóbal, Coco Solo) y Zona Libre."
+    },
+    {
+      "id": "pa-colon-nucleos-densos",
+      "title": "Núcleos construidos de muy alta densidad y textura heterogénea (191 polígonos · 2,185.9 ha)",
+      "group": "3 · Síntesis territorial, logística y frentes de expansión",
+      "format": "geojson",
+      "geometry_type": "polygon",
+      "status": "publicado",
+      "source_path": "geovisor/capas/colon_nucleos_alta_densidad.geojson",
+      "resolution": "Polígonos >= 0.50 ha compatibles con tejido compacto / asentamientos densos",
+      "style": {
+        "fill_color": "#F28C28",
+        "fill_opacity": 0.5,
+        "stroke_color": "#C2410C",
+        "stroke_width": 1.1,
+        "visible_by_default": false
+      },
+      "caveat": "Clasificación morfológica orientativa basada en compacidad local (>68%) y heterogeneidad óptica; requiere contraste social y catastral."
+    }
+  ]
+}

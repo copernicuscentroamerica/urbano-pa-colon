@@ -1,0 +1,43 @@
+name: Tarea del PMV
+description: Registrar un resultado concreto y su criterio de aceptación (Indica el identificador estable de la iniciativa.)
+title: "[PMV] "
+labels: ["tipo:tarea"]
+body:
+  - type: dropdown
+    id: project_id
+    attributes:
+      label: Proyecto
+      options:
+        - pa-panama-oeste
+        - sv-amss
+        - cr-la-carpio
+        - sv-la-union
+        - gt-bethania
+        - do-santiago
+        - gt-salud-metropolitana
+        - hn-distrito-central
+    validations:
+      required: true
+  - type: textarea
+    id: expected_result
+    attributes:
+      label: Resultado esperado
+      description: Describe qué producto, script o capa quedará disponible al terminar.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Criterio de aceptación
+      description: Explica cómo se comprobará y qué evidencia verificable se adjuntará.
+    validations:
+      required: true
+  - type: input
+    id: target_date
+    attributes:
+      label: Fecha objetivo propuesta (sujeta a confirmación)
+      placeholder: AAAA-MM-DD
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Datos, accesos o apoyos necesarios

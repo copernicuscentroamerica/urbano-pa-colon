@@ -1,0 +1,137 @@
+{
+  "id": "colon-corredor-urbano-portuario",
+  "titulo": "Corredor Urbano, Portuario y Transístmico del Distrito de Colón (2018–2024)",
+  "generado_en": "2026-11-12T12:30:00Z",
+  "centroide": {
+    "lat": 9.33,
+    "lon": -79.855
+  },
+  "radio_km": 8.8,
+  "forma": "cuadrado",
+  "bbox": [
+    -79.943,
+    9.247,
+    -79.767,
+    9.413
+  ],
+  "temporada_meses": [
+    1,
+    4
+  ],
+  "escala_m": 10,
+  "anios": [
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "anios_omitidos": [],
+  "archivos": {
+    "2018": {
+      "rgb": "rgb_2018.jpg",
+      "clase": "clase_2018.png"
+    },
+    "2019": {
+      "rgb": "rgb_2019.jpg",
+      "clase": "clase_2019.png"
+    },
+    "2020": {
+      "rgb": "rgb_2020.jpg",
+      "clase": "clase_2020.png"
+    },
+    "2021": {
+      "rgb": "rgb_2021.jpg",
+      "clase": "clase_2021.png"
+    },
+    "2022": {
+      "rgb": "rgb_2022.jpg",
+      "clase": "clase_2022.png"
+    },
+    "2023": {
+      "rgb": "rgb_2023.jpg",
+      "clase": "clase_2023.png"
+    },
+    "2024": {
+      "rgb": "rgb_2024.jpg",
+      "clase": "clase_2024.png"
+    }
+  },
+  "estadisticas_ha": {
+    "2018": {
+      "urbanizacion": 624.35,
+      "asentamiento": 2577.17,
+      "industrial_comercial": 1832.79,
+      "vegetacion": 17602.55,
+      "suelo_desnudo": 45.14,
+      "agua_otros": 12804.5
+    },
+    "2019": {
+      "urbanizacion": 641.17,
+      "asentamiento": 2844.21,
+      "industrial_comercial": 1634.44,
+      "vegetacion": 17330.95,
+      "suelo_desnudo": 34.14,
+      "agua_otros": 13001.61
+    },
+    "2020": {
+      "urbanizacion": 612.56,
+      "asentamiento": 2659.22,
+      "industrial_comercial": 1738.73,
+      "vegetacion": 17360.81,
+      "suelo_desnudo": 21.81,
+      "agua_otros": 13093.37
+    },
+    "2021": {
+      "urbanizacion": 658.91,
+      "asentamiento": 2756.3,
+      "industrial_comercial": 1612.81,
+      "vegetacion": 17645.16,
+      "suelo_desnudo": 12.34,
+      "agua_otros": 12800.99
+    },
+    "2022": {
+      "urbanizacion": 547.67,
+      "asentamiento": 2173.68,
+      "industrial_comercial": 2355.84,
+      "vegetacion": 17601.31,
+      "suelo_desnudo": 8.49,
+      "agua_otros": 12799.53
+    },
+    "2023": {
+      "urbanizacion": 557.56,
+      "asentamiento": 2252.83,
+      "industrial_comercial": 2468.05,
+      "vegetacion": 17388.74,
+      "suelo_desnudo": 13.49,
+      "agua_otros": 12805.85
+    },
+    "2024": {
+      "urbanizacion": 661.58,
+      "asentamiento": 2291.6,
+      "industrial_comercial": 3085.83,
+      "vegetacion": 16640.71,
+      "suelo_desnudo": 0.95,
+      "agua_otros": 12805.85
+    }
+  },
+  "umbrales": {
+    "cloud_score_min": 0.6,
+    "brillo_vis_min": 0.17,
+    "swir1_min": 0.2,
+    "ndvi_max_industrial": 0.22,
+    "parche_industrial_px": 150,
+    "radio_densidad_m": 60,
+    "densidad_asentamiento_min": 0.68,
+    "radio_textura_m": 30,
+    "textura_asentamiento_min": 0.032
+  },
+  "fuentes": [
+    "Copernicus Sentinel-2 L2A / EOX Cloudless (ESA / Unión Europea)",
+    "Sentinel-2 10m Annual Land Use / Land Cover (Impact Observatory)",
+    "OpenStreetMap ODbL (calibración de recintos portuarios y Zona Libre de Colón)"
+  ],
+  "advertencia": "Clasificación multianual a 10 m generada con la metodología GEO-URBANO (colon2025mun-commits) para apoyar la gestión territorial, portuaria y urbana en el Distrito de Colón."
+}

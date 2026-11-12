@@ -1,0 +1,197 @@
+[
+  {
+    "key": "proj-p1",
+    "number": "LÁMINA P1",
+    "shortTitle": "P1 · Cobertura 2024 (10 m)",
+    "title": "Clasificación Morfológica Multiclase GEO-URBANO 2024 a 10 m en el Distrito de Colón",
+    "sensor": "Copernicus Sentinel-2 L2A (época seca 2024) + Motor GEO-URBANO (colon2025mun-commits)",
+    "formula": "6 Clases: Urbanizacion (661.6 ha) | Asent_Denso (2,291.6 ha) | Industrial_ZLC (3,085.8 ha) | Veg (16,640.7 ha)",
+    "reading": "Separa con claridad las grandes plataformas logísticas y terminales de contenedores (Cristóbal, MIT, CCT, Zona Libre y France Field) del casco compacto de Isla Manzanillo y los corredores residenciales de Cativá y Sabanitas.",
+    "imageRel": "geovisor/data/colon_cobertura_2024.png",
+    "coords": [
+      [
+        -79.943,
+        9.413
+      ],
+      [
+        -79.767,
+        9.413
+      ],
+      [
+        -79.767,
+        9.247
+      ],
+      [
+        -79.943,
+        9.247
+      ]
+    ],
+    "swatches": [
+      {
+        "color": "#7B2CBF",
+        "label": "Industrial / Portuario / Zona Libre",
+        "desc": "3,085.8 ha (51.1% de la huella construida)"
+      },
+      {
+        "color": "#F28C28",
+        "label": "Asentamiento de Alta Densidad",
+        "desc": "2,291.6 ha · Compacidad >68% y textura fina"
+      },
+      {
+        "color": "#D7263D",
+        "label": "Urbanización Residencial / Mixta",
+        "desc": "661.6 ha · Trazado urbano regular"
+      },
+      {
+        "color": "#2E8B57",
+        "label": "Bosque Húmedo y Manglar Costero",
+        "desc": "16,640.7 ha · Soporte ecosistémico"
+      },
+      {
+        "color": "#C9A66B",
+        "label": "Suelo Desnudo / Explanación",
+        "desc": "9.6 ha en transición constructiva"
+      }
+    ]
+  },
+  {
+    "key": "proj-p2",
+    "number": "LÁMINA P2",
+    "shortTitle": "P2 · Expansión 2018–2024",
+    "title": "Frentes de Nueva Expansión Construida 2018–2024 (+1,004.7 ha Netas · 324 Polígonos)",
+    "sensor": "Diferencia multianual Sentinel-2 2018 vs. 2024 sobre el corredor de Colón",
+    "formula": "Expansion_2018_2024 = (No_Construido_2018 AND Construido_2024) con parche >= 0.35 ha",
+    "reading": "Muestra que los mayores pulsos de expansión se concentran en nuevos patios logísticos e industriales de Cristóbal/Coco Solo y en los frentes periurbanos del eje Transístmico (Cativá, Sabanitas y Puerto Pilón).",
+    "imageRel": "assets/img/atlas_proyecto/lamina_p2.png",
+    "coords": [
+      [
+        -79.9398,
+        9.4095
+      ],
+      [
+        -79.7702,
+        9.4095
+      ],
+      [
+        -79.7702,
+        9.2505
+      ],
+      [
+        -79.9398,
+        9.2505
+      ]
+    ],
+    "swatches": [
+      {
+        "color": "#FFBE0B",
+        "label": "Nueva Expansión 2018–2024",
+        "desc": "324 polígonos (1,102.6 ha brutas · +1,004.7 ha netas)"
+      },
+      {
+        "color": "#7B2CBF",
+        "label": "Recintos Logísticos y Portuarios",
+        "desc": "2,866.8 ha de huella logística consolidada"
+      },
+      {
+        "color": "#64748B",
+        "label": "Límites de Corregimientos (6)",
+        "desc": "Barrio Norte, Barrio Sur, Cristóbal, Cativá, Sabanitas, Pilón"
+      }
+    ]
+  },
+  {
+    "key": "proj-p3",
+    "number": "LÁMINA P3",
+    "shortTitle": "P3 · Polos vs. Densidad",
+    "title": "Estructura Dual de Colón: Polos Logístico-Portuarios vs. Núcleos de Alta Densidad",
+    "sensor": "Reglas morfológico-espectrales GEO-URBANO sobre reflectancia visible, SWIR1 y compacidad",
+    "formula": "Logistica: Area>=1.5ha & SWIR1>0.20 ; Alta_Densidad: Compacidad_60m>0.68 & SD_30m>0.032",
+    "reading": "Permite a la Alcaldía de Colón y al MIVIOT separar demandas territoriales distintas: movilidad de carga y amortiguamiento alrededor de puertos/Zona Libre frente a mejoramiento barrial y drenaje pluvial en tejidos densos.",
+    "imageRel": "assets/img/atlas_proyecto/lamina_p3.png",
+    "coords": [
+      [
+        -79.9398,
+        9.4095
+      ],
+      [
+        -79.7702,
+        9.4095
+      ],
+      [
+        -79.7702,
+        9.2505
+      ],
+      [
+        -79.9398,
+        9.2505
+      ]
+    ],
+    "swatches": [
+      {
+        "color": "#7B2CBF",
+        "label": "Polos Logísticos / Zona Libre (143)",
+        "desc": "2,866.8 ha · Naves comerciales y terminales marítimas"
+      },
+      {
+        "color": "#F28C28",
+        "label": "Núcleos de Alta Densidad (191)",
+        "desc": "2,185.9 ha · Tejidos residenciales compactos"
+      },
+      {
+        "color": "#475569",
+        "label": "Corredor Distrital de Referencia",
+        "desc": "6 corregimientos analizados"
+      }
+    ]
+  },
+  {
+    "key": "proj-p4",
+    "number": "LÁMINA P4",
+    "shortTitle": "P4 · Malla Síntesis 250 m",
+    "title": "Malla Continua de Síntesis Territorial a 250 m (2,003 Celdas con Balance 2018–2024)",
+    "sensor": "Agregación zonal de los mosaicos de 10 m sobre cuadrícula de 250 m",
+    "formula": "Celda_250m: { pct_const_2018, pct_const_2024, cambio_const_pp, clase_dominante }",
+    "reading": "Homologa los indicadores de Colón al estándar regional de malla continua del Clúster Copernicus Urbano, facilitando cruces futuros con censo, catastro e inundación costera.",
+    "imageRel": "assets/img/atlas_proyecto/lamina_p4.png",
+    "coords": [
+      [
+        -79.9398,
+        9.4095
+      ],
+      [
+        -79.7702,
+        9.4095
+      ],
+      [
+        -79.7702,
+        9.2505
+      ],
+      [
+        -79.9398,
+        9.2505
+      ]
+    ],
+    "swatches": [
+      {
+        "color": "#7B2CBF",
+        "label": "Dominancia Industrial / Portuaria",
+        "desc": "Celdas con predominio logístico y comercial"
+      },
+      {
+        "color": "#F28C28",
+        "label": "Dominancia Asentamiento Denso",
+        "desc": "Celdas residenciales de alta compacidad"
+      },
+      {
+        "color": "#D7263D",
+        "label": "Dominancia Urbanización",
+        "desc": "Tejido residencial de traza abierta"
+      },
+      {
+        "color": "#2E8B57",
+        "label": "Dominancia Bosque y Manglar",
+        "desc": "Reserva forestal y manglares de bahía"
+      }
+    ]
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "descripcion": "Catálogo único de categorías del comparador multianual. Lo leen el generador del sitio y el script Python; el script del Code Editor de Earth Engine replica estos valores en su bloque CLASES.",
+  "clases": [
+    {"codigo": 1, "id": "urbanizacion", "etiqueta": "Urbanización", "color": "#D7263D", "descripcion": "Tejido urbano construido consolidado (no clasificado como asentamiento ni industrial/comercial)."},
+    {"codigo": 2, "id": "asentamiento", "etiqueta": "Asentamiento", "color": "#F28C28", "descripcion": "Construido de muy alta densidad y textura heterogénea, patrón compatible con asentamientos informales (indicativo, requiere validación local)."},
+    {"codigo": 3, "id": "industrial_comercial", "etiqueta": "Industrial / comercial", "color": "#7B2CBF", "descripcion": "Parches construidos grandes, brillantes y con poca vegetación (naves, bodegas, centros comerciales)."},
+    {"codigo": 4, "id": "vegetacion", "etiqueta": "Vegetación", "color": "#2E8B57", "descripcion": "Árboles, pasto, arbustos, cultivos y vegetación inundable (Dynamic World)."},
+    {"codigo": 5, "id": "suelo_desnudo", "etiqueta": "Suelo desnudo", "color": "#C9A66B", "descripcion": "Suelo expuesto, canteras, solares sin cobertura (Dynamic World: bare)."},
+    {"codigo": 6, "id": "agua_otros", "etiqueta": "Agua / otros (auxiliar)", "color": "#9DB4C0", "descripcion": "Agua y nieve/hielo. Clase auxiliar para no contaminar las cinco categorías de interés."}
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0.0",
+  "project_id": "pa-colon",
+  "theme_version": "2.0.0-copernicus-2026",
+  "updated_at": "2026-11-12",
+  "project_logo": null,
+  "institutions": [
+    {
+      "id": "mun-colon",
+      "name": "Municipio de Colón (Alcaldía del Distrito de Colón)",
+      "acronym": "Municipio de Colón",
+      "role": "Gobierno local y planificación urbana",
+      "logo_path": null,
+      "alt_text": "Municipio de Colón, Panamá",
+      "url": "https://colon.gob.pa/",
+      "order": 1,
+      "aspect_hint": "auto"
+    },
+    {
+      "id": "miviot-colon",
+      "name": "Ministerio de Vivienda y Ordenamiento Territorial (Regional Colón)",
+      "acronym": "MIVIOT",
+      "role": "Rectoría de ordenamiento territorial y vivienda",
+      "logo_path": null,
+      "alt_text": "Ministerio de Vivienda y Ordenamiento Territorial de Panamá",
+      "url": "https://www.miviot.gob.pa/",
+      "order": 2,
+      "aspect_hint": "auto"
+    },
+    {
+      "id": "zolicol",
+      "name": "Zona Libre de Colón",
+      "acronym": "ZLC",
+      "role": "Entorno logístico y comercial de referencia",
+      "logo_path": null,
+      "alt_text": "Zona Libre de Colón",
+      "url": "https://www.zolicol.gob.pa/",
+      "order": 3,
+      "aspect_hint": "auto"
+    }
+  ]
+}

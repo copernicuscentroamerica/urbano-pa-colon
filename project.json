@@ -1,0 +1,196 @@
+{
+  "schema_version": "1.0.0",
+  "id": "pa-colon",
+  "title": "Dinámica multianual de cobertura urbana, logística portuaria y asentamientos en el Distrito de Colón (2018–2024)",
+  "country": {
+    "code": "PA",
+    "name": "Panamá"
+  },
+  "source_groups": [
+    7
+  ],
+  "summary": "Monitoreo satelital multianual a 10 m (2018–2024) sobre 24,696.2 ha del corredor urbano, logístico-portuario y transístmico del Distrito de Colón (Isla Manzanillo, Zona Libre, puertos de Cristóbal/MIT/Coco Solo, Cativá, Sabanitas y Puerto Pilón), diferenciando urbanización consolidada, asentamientos de alta densidad, recintos industriales-portuarios, manglares/bosques y frentes de expansión.",
+  "territory": {
+    "label": "Corredor Urbano, Portuario y Transístmico del Distrito de Colón (Barrio Norte, Barrio Sur, Cristóbal, Cativá, Sabanitas y Puerto Pilón · 24,696.2 ha)",
+    "administrative_units": [
+      "Provincia de Colón",
+      "Distrito de Colón",
+      "Barrio Norte y Barrio Sur (Isla Manzanillo)",
+      "Cristóbal y Zona Libre de Colón",
+      "Cativá, Sabanitas y Puerto Pilón"
+    ],
+    "geometry_url": "https://copernicuscentroamerica.github.io/urbano-pa-colon/geovisor/capas/perimetro_zona_estudio.geojson"
+  },
+  "institutional_use": {
+    "problem": "El Distrito de Colón experimenta simultáneamente la expansión de recintos logístico-portuarios y comerciales, la consolidación de asentamientos de muy alta densidad constructiva y presiones sobre manglares costeros y bosques húmedos, requiriendo evidencia anual objetiva para la gestión municipal y el ordenamiento territorial.",
+    "institutions": [
+      "Municipio de Colón (Alcaldía del Distrito de Colón)",
+      "Ministerio de Vivienda y Ordenamiento Territorial (MIVIOT — Regional Colón)",
+      "Administración de la Zona Libre de Colón y Autoridad Marítima de Panamá"
+    ],
+    "primary_user": "Direcciones de Planificación Urbana, Ingeniería Municipal, Gestión Ambiental y Ordenamiento Territorial del Distrito de Colón.",
+    "decision_supported": "Identificar frentes de expansión construida (2018–2024), distinguir el crecimiento de recintos industriales/logísticos frente a tejidos residenciales densos, proteger los manglares de Bahía de Manzanillo y Coco Solo y orientar inversiones de mejoramiento barrial e infraestructura.",
+    "expected_benefit": "Contar con un comparador multianual abierto, un geovisor interactivo con malla continua de 250 m y scripts reproducibles en Google Earth Engine y Python actualizables cada temporada seca."
+  },
+  "pmv": {
+    "description": "Geovisor interactivo, comparador multianual deslizable A|B (2018–2024) a 10 m con seis categorías morfológicas GEO-URBANO, malla continua de 2,003 celdas de 250 m, vectorización de polos logísticos (2,866.8 ha), núcleos densos (2,185.9 ha) y expansión 2018–2024 (+1,004.7 ha netas), junto con scripts reproducibles en Google Earth Engine y Python.",
+    "scope_status": "declarado",
+    "acceptance_criteria": [
+      {
+        "id": "pa-colon-AC-01",
+        "description": "Se delimita el corredor operativo de 24,696.2 ha y sus corregimientos en EPSG:4326 con estadísticas de cambio 2018–2024 por unidad territorial.",
+        "status": "declarado",
+        "evidence_required": "Capas perimetro_zona_estudio.geojson y colon_corregimientos.geojson publicadas."
+      },
+      {
+        "id": "pa-colon-AC-02",
+        "description": "Se genera la serie anual libre de nubes 2018–2024 a 10 m separando seis clases (urbanización, asentamiento denso, industrial/portuario, vegetación/manglar, suelo desnudo y agua).",
+        "status": "declarado",
+        "evidence_required": "Serie publicada en comparador/resultados/colon-corredor-urbano-portuario/ y COGs 2018/2021/2024."
+      },
+      {
+        "id": "pa-colon-AC-03",
+        "description": "Se publica una malla continua de 2,003 celdas de 250 m y polígonos de expansión 2018–2024 para priorización territorial.",
+        "status": "declarado",
+        "evidence_required": "Capas colon_malla_cobertura_250m.geojson y colon_expansion_construida_2018_2024.geojson activas en el Geovisor."
+      },
+      {
+        "id": "pa-colon-AC-04",
+        "description": "El módulo /comparador/ permite deslizar cualquier par de años A|B, filtrar categorías y generar el código parametrizado de Google Earth Engine.",
+        "status": "declarado",
+        "evidence_required": "Subpágina /comparador/ operativa con gráficos y tabla de hectáreas 2018–2024."
+      }
+    ]
+  },
+  "status": {
+    "development": "demostrable",
+    "demo": "disponible",
+    "technical_review": {
+      "state": "en_revision",
+      "evidence_url": "https://copernicuscentroamerica.github.io/urbano-pa-colon/comparador/",
+      "date": "2026-11-12",
+      "reviewer": "Equipo Técnico Clúster Copernicus Urbano"
+    },
+    "institutional_validation": {
+      "state": "pendiente",
+      "evidence_url": null,
+      "date": null,
+      "reviewer": null
+    },
+    "adoption": {
+      "state": "piloto",
+      "evidence_url": "https://copernicuscentroamerica.github.io/urbano-pa-colon/aplicacion/",
+      "date": "2026-11-12"
+    }
+  },
+  "links": {
+    "repository": "https://github.com/copernicuscentroamerica/urbano-pa-colon",
+    "website": "https://copernicuscentroamerica.github.io/urbano-pa-colon/",
+    "demo": "https://copernicuscentroamerica.github.io/urbano-pa-colon/aplicacion/",
+    "documentation": "https://copernicuscentroamerica.github.io/urbano-pa-colon/comparador/",
+    "issue_tracker": "https://github.com/copernicuscentroamerica/urbano-pa-colon/issues"
+  },
+  "governance": {
+    "technical_owner": "Equipo Técnico Municipal de Colón y Clúster Copernicus Urbano",
+    "content_owner": "Municipio de Colón — Planificación Urbana y Ordenamiento Territorial",
+    "update_frequency": "Anual (época seca enero–abril)",
+    "content_updated_at": "2026-11-12"
+  },
+  "provenance": {
+    "sources": [
+      {
+        "id": "COL01",
+        "label": "Repositorio y motor metodológico GEO-URBANO (colon2025mun-commits)",
+        "locator": "src/gee/geourbano_comparador.js",
+        "url": "https://github.com/colon2025mun-commits/urbano-gt-comparador"
+      },
+      {
+        "id": "COL02",
+        "label": "Serie anual Copernicus Sentinel-2 L2A + LULC 10 m procesada sobre el Distrito de Colón (2018–2024)",
+        "locator": "comparador/resultados/colon-corredor-urbano-portuario/meta.json",
+        "url": "https://copernicuscentroamerica.github.io/urbano-pa-colon/geovisor/data/indicadores_cobertura_colon_2018_2024.csv"
+      }
+    ],
+    "statements": [
+      {
+        "pointer": "/title",
+        "status": "declarado",
+        "source_ids": [
+          "COL01",
+          "COL02"
+        ],
+        "note": "Proyecto focalizado en el corredor urbano-portuario y transístmico del Distrito de Colón, Panamá."
+      },
+      {
+        "pointer": "/methodology",
+        "status": "declarado",
+        "source_ids": [
+          "COL01",
+          "COL02"
+        ],
+        "note": "Clasificación espectral y morfológica en 6 clases a 10 m desarrollada en GEE y Python."
+      },
+      {
+        "pointer": "/team",
+        "status": "declarado",
+        "source_ids": [
+          "COL01"
+        ],
+        "note": "Autoría técnica registrada en los commits de colon2025mun-commits."
+      }
+    ]
+  },
+  "team": [
+    {
+      "name": "Andrés Barrionuevo",
+      "role": "Desarrollo metodológico y comparador multianual",
+      "institution": "Municipio de Colón, Panamá",
+      "github_username": "colon2025mun-commits",
+      "profile_url": "https://github.com/colon2025mun-commits"
+    }
+  ],
+  "data_sources": [
+    {
+      "title": "Copernicus Sentinel-2 L2A (compuestos anuales de época seca 2018–2024 a 10 m)",
+      "provider": "Programa Copernicus — Agencia Espacial Europea (ESA)",
+      "url": "https://dataspace.copernicus.eu/",
+      "access": "abierto",
+      "description": "Reflectancia superficial visible (B2, B3, B4), infrarrojo cercano (B8, NDVI) e infrarrojo de onda corta (B11, SWIR1) con filtrado de nubes SCL/Cloud Score+.",
+      "status": "declarado"
+    },
+    {
+      "title": "Sentinel-2 10m Annual Land Use / Land Cover (2018–2023) y Dynamic World V1",
+      "provider": "Impact Observatory / Google Earth Engine / Copernicus",
+      "url": "https://planetarycomputer.microsoft.com/dataset/io-lulc-annual-v02",
+      "access": "abierto",
+      "description": "Cobertura base anual a 10 m empleada para separar huella construida, bosques/manglares, suelo expuesto y cuerpos de agua.",
+      "status": "declarado"
+    },
+    {
+      "title": "Cartografía referencial de corregimientos y recintos portuarios/Zona Libre (OpenStreetMap ODbL)",
+      "provider": "OpenStreetMap Contributors",
+      "url": "https://www.openstreetmap.org/",
+      "access": "abierto",
+      "description": "Límites referenciales de Barrio Norte, Barrio Sur, Cristóbal, Cativá, Sabanitas y Puerto Pilón para desagregación territorial.",
+      "status": "declarado"
+    }
+  ],
+  "methodology": "Integración de compuestos anuales de época seca (enero–abril, 2018–2024) de Copernicus Sentinel-2 L2A a 10 m con clasificación base de cobertura del suelo y subdivisión morfológico-espectral del tejido construido mediante el algoritmo GEO-URBANO: (1) Industrial, portuario y comercial (parches contiguos >= 1.5 ha con alta reflectancia visible > 0.17, SWIR1 > 0.20 y NDVI < 0.22, capturando naves de Zona Libre, terminales de contenedores de Cristóbal/MIT/Coco Solo y bodegas en Cativá); (2) Asentamiento de muy alta densidad (densidad construida en radio de 60 m > 0.68 y textura óptica en radio de 30 m > 0.032); y (3) Urbanización residencial y mixta consolidada. Los resultados se agregan en una malla continua de 2,003 celdas de 250 m y por corregimiento.",
+  "expected_outputs": [
+    "Geovisor interactivo con superposición de coberturas ráster (2018, 2021, 2024) y capas vectoriales de síntesis",
+    "Comparador multianual deslizable A|B (2018–2024) con filtrado interactivo por clase y generador de script GEE",
+    "Malla continua de 2,003 celdas de 250 m con porcentajes de cobertura y cambio construido 2018–2024",
+    "Documento metodológico en Word (.docx) y Atlas Cartográfico PDF (Parte I + Anexo Copernicus)"
+  ],
+  "limitations": [
+    "La separación morfológica a 10 m entre urbanización residencial densa, cascos históricos compactos (Isla Manzanillo) y asentamientos informales es indicativa y requiere calibración con catastro municipal y MIVIOT.",
+    "La persistente nubosidad caribeña sobre Colón obliga a priorizar la ventana seca (enero–abril) y compuestos multiescena libres de nubes."
+  ],
+  "tags": [
+    "colón",
+    "cobertura urbana",
+    "logística portuaria",
+    "comparador multianual",
+    "sentinel-2"
+  ]
+}
